@@ -1,11 +1,18 @@
 {
   "fill" : { "solid" : "display-p3:0.957,0.918,0.835,1" },
+  "fill-specializations" : {
+    "dark" : { "solid" : "display-p3:0.118,0.106,0.090,1" }
+  },
   "groups" : [
     {
       "layers" : [
         {
           "image-name" : "Logo.svg",
           "name" : "Logo",
+          "fill" : { "solid" : "display-p3:0.137,0.129,0.110,1" },
+          "fill-specializations" : {
+            "dark" : { "solid" : "display-p3:0.957,0.918,0.835,1" }
+          },
           "position" : { "scale" : 0.82, "translation-in-points" : [ 0, 0 ] }
         }
       ],
