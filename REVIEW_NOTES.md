@@ -1,34 +1,70 @@
-# App Review Notes
+# App Review Notes — Font Changer
 
-Font Changer is a Safari Web Extension that restyles web page text locally:
-font, size, line height, letter and word spacing. It is on by default and can be
-turned off globally or per site.
+Font Changer is a free Safari Web Extension that restyles the **text** of web
+pages locally for readability: it swaps the font (bundled OpenDyslexic, Lexend,
+or Atkinson Hyperlegible, the system font, or any font already installed on the
+device) and optionally adjusts text size, line height, letter spacing, and word
+spacing. Settings cascade from a global default to optional per-site overrides,
+and the extension can be turned off globally or per site.
 
-## What it does
-- Changes the font and spacing of pages using fonts bundled in the app.
-- Stores all settings locally (browser extension storage). No network requests,
-  no tracking, no accounts.
+**No account, sign-in, or purchase is required** to use any feature. There is
+nothing to log in to and no paywall — just enable the extension and browse.
 
-## How to test
+## Why the extension requests access to all websites
+
+`host_permissions` and the content script are declared for `<all_urls>`, and
+this is **functionally required**: the purpose of the app is to restyle the text
+of *whatever page the user is reading*, on by default. A reading-accessibility
+tool that only worked on a fixed allow-list of domains would not serve its
+purpose (a dyslexic reader needs it everywhere). The access is used **only** to
+apply CSS to text on the current page; the extension never reads page content,
+form data, URLs, or browsing history, and nothing is transmitted off the device.
+
+Requested permissions and the reason for each:
+
+- **`host_permissions: <all_urls>` + content script on `<all_urls>`** — apply the
+  font/spacing CSS to the page the user is viewing. Runs at `document_start` in
+  all frames so text doesn't visibly reflow.
+- **`storage`** — persist the user's font/size/spacing preferences and per-site
+  rules locally (extension storage). Never synced or uploaded.
+- **`activeTab`** — let the toolbar popup read the current tab's host so it can
+  show and edit settings for "this site."
+- **`web_accessible_resources` (`fonts.json`, `fonts/*.woff2`)** — load the
+  bundled font files into the page via `@font-face`. These are local files
+  shipped in the app; **no font is ever fetched from the network.**
+
+## How to enable and test
+
 1. Build and run the macOS app, or install the iOS app on a device.
 2. Enable the extension:
-   - macOS: Safari → Settings → Extensions → enable "Font Changer"; set its
-     website access to Allow on Every Website.
-   - iOS: Settings → Apps → Safari → Extensions → Font Changer → on; allow all
-     websites.
-3. Open https://en.wikipedia.org.
-4. The page text renders in OpenDyslexic. Click the toolbar icon to change the
-   font, size, or spacing, or to toggle this site off.
+   - **macOS:** Safari → Settings → Extensions → turn on "Font Changer", then set
+     its website access to **Allow on Every Website**.
+   - **iOS:** Settings → Apps → Safari → Extensions → Font Changer → **On**, and
+     **Allow** access to all websites.
+3. Open any text page, e.g. `https://en.wikipedia.org`.
+4. The body text renders in OpenDyslexic by default. Tap/click the Font Changer
+   toolbar item to open the popup, where you can change the font, text size, line
+   height, and spacing, switch between **This site** and **Defaults**, or toggle
+   the extension off for the current site. "View all customizations" opens a page
+   to edit your defaults (with a live preview) and manage per-site rules.
+
+Code blocks and icon fonts are intentionally left untouched.
 
 ## Privacy
-- Collects no data. See PRIVACY.md. App Privacy label: "Data Not Collected."
-- No remote resources: every font is bundled; nothing is fetched at runtime.
 
-## Submission notes
-- `PrivacyInfo.xcprivacy` declares no tracking and no collected data. Add it to
-  the app and extension targets (Target → Build Phases / drag in, check target
-  membership). If review flags a UserDefaults required-reason API, add
-  `NSPrivacyAccessedAPICategoryUserDefaults` with reason `CA92.1`.
-- Provide a Privacy Policy URL (host PRIVACY.md) and a Support URL.
-- Make `SafariWebExtensionHandler` a no-op that logs nothing (see the generated
-  Swift file under `safari/`).
+- **Collects no data.** App Privacy label: **Data Not Collected.** See
+  `PRIVACY.md` (hosted at the Privacy Policy URL provided in App Store Connect).
+- **No network use.** Every font is bundled in the app; nothing is fetched at
+  runtime. There is no tracking, analytics, advertising, or telemetry.
+- All preferences stay in local extension storage on the device.
+
+## Technical / submission notes
+
+- `PrivacyInfo.xcprivacy` declares no tracking and no collected data; it is
+  included in the app and extension targets. If review flags a UserDefaults
+  required-reason API, the declared reason is `CA92.1`
+  (`NSPrivacyAccessedAPICategoryUserDefaults`).
+- `SafariWebExtensionHandler` is a no-op and logs nothing.
+- A **Privacy Policy URL** (hosting `PRIVACY.md`) and a **Support URL** are
+  provided in App Store Connect.
+- Source is open: <https://github.com/spashii/font-changer>.
