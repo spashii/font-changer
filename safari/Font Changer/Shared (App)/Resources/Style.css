@@ -60,16 +60,6 @@ button {
     font-size: 1em;
 }
 
-button.primary {
-    padding: 9px 20px;
-    border: none;
-    border-radius: 12px;
-    background: light-dark(#b8651a, #e6a35a);
-    color: light-dark(#ffffff, #1e1b17);
-    font-weight: 600;
-    cursor: pointer;
-}
-
 .links {
     display: flex;
     flex-direction: column;

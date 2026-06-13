@@ -74,10 +74,6 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
             if let url = URL(string: string) { UIApplication.shared.open(url) }
         }
         switch action {
-        case "open-settings":
-            // Opens this app's page in Settings; from there the user reaches
-            // Safari → Extensions to enable Font Changer.
-            open(UIApplication.openSettingsURLString)
         case "rate-app":
             open(appStoreReviewURL)
         case "star-repo":

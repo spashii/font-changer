@@ -27,6 +27,5 @@ function wire(selector, action) {
 }
 
 wire("button.open-preferences", "open-preferences");
-wire("button.open-settings", "open-settings");
 wire("button.rate-app", "rate-app");
 wire("button.star-repo", "star-repo");
