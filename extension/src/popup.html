@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="odx-header">
+      <img class="odx-logo" src="../icons/icon-48.png" alt="" width="32" height="32" />
+      <div class="odx-titles">
+        <h1>Font Changer</h1>
+        <div class="odx-host" id="odx-host">this page</div>
+      </div>
+    </header>
+
+    <div class="odx-status" id="odx-status"></div>
+
+    <label class="odx-row" for="odx-enabled">
+      <span class="odx-label" id="odx-enabled-label">On this site</span>
+      <input type="checkbox" id="odx-enabled" class="odx-switch" role="switch" aria-label="Enabled on this site" />
+    </label>
+
+    <div class="odx-seg" role="tablist" aria-label="What you are editing">
+      <button type="button" class="odx-seg-btn on" id="odx-ctx-site" role="tab" aria-selected="true">This site</button>
+      <button type="button" class="odx-seg-btn" id="odx-ctx-def" role="tab" aria-selected="false">Defaults</button>
+    </div>
+
+    <div id="odx-rows"></div>
+
+    <p class="odx-summary" id="odx-summary" role="status"></p>
+
+    <div class="odx-foot">
+      <button type="button" class="odx-link" id="odx-undo" hidden>Undo</button>
+      <button type="button" class="odx-link" id="odx-reset-site" hidden>Reset this site</button>
+      <button type="button" class="odx-link" id="odx-help">Help</button>
+      <button type="button" class="odx-link odx-link-right" id="odx-viewall">View all customizations</button>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+/*
+  Font Changer — injected on every page, inert until content.js adds `odx-active`
+  to <html>. content.js injects the @font-face for the bundled font (loaded from
+  local files, never the network), sets the --odx-* variables inline, and toggles
+  the odx-size / odx-lh / odx-ls / odx-ws classes.
+*/
+
+html.odx-active body {
+  font-family: var(--odx-font, "OpenDyslexicWeb"), sans-serif !important;
+}
+
+/* Force the font on every element except icon fonts (they render glyphs via
+   font-family, so overriding mangles them). Excludes are in :where() for zero
+   specificity; !important wins against the page. */
+html.odx-active body *:not(:where(
+  i, [class*="icon"], [class*="Icon"],
+  .fa, .fas, .far, .fal, .fab, [class^="fa-"], [class*=" fa-"],
+  .material-icons, [class*="material-icons"], [class*="material-symbols"],
+  .glyphicon, [class*="glyphicon"], [class*="vjs-icon"], [data-icon]
+)) {
+  font-family: var(--odx-font, "OpenDyslexicWeb"), sans-serif !important;
+}
+
+/* Keep code monospaced; out-specifies the rule above so it wins. */
+html.odx-active body :is(code, kbd, samp, tt, pre),
+html.odx-active body :is(code, pre) * {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace !important;
+}
+
+/* Optional text size, applied as a page zoom (top frame only). */
+html.odx-size body {
+  zoom: var(--odx-size, 1);
+}
+
+/* Optional line-height, excluding icon fonts. */
+html.odx-lh body *:not(:where(
+  i, [class*="icon"], [class*="Icon"], .fa, .fas, .far, .fal, .fab,
+  [class^="fa-"], [class*=" fa-"], .material-icons, [class*="material-icons"],
+  [class*="material-symbols"], .glyphicon, [class*="glyphicon"], [class*="vjs-icon"], [data-icon]
+)) {
+  line-height: var(--odx-lh) !important;
+}
+
+/* Optional letter-spacing, excluding icon fonts (spacing splits icon glyphs). */
+html.odx-ls body *:not(:where(
+  i, [class*="icon"], [class*="Icon"], .fa, .fas, .far, .fal, .fab,
+  [class^="fa-"], [class*=" fa-"], .material-icons, [class*="material-icons"],
+  [class*="material-symbols"], .glyphicon, [class*="glyphicon"], [class*="vjs-icon"], [data-icon]
+)) {
+  letter-spacing: var(--odx-ls) !important;
+}
+
+/* Optional word-spacing, excluding icon fonts. */
+html.odx-ws body *:not(:where(
+  i, [class*="icon"], [class*="Icon"], .fa, .fas, .far, .fal, .fab,
+  [class^="fa-"], [class*=" fa-"], .material-icons, [class*="material-icons"],
+  [class*="material-symbols"], .glyphicon, [class*="glyphicon"], [class*="vjs-icon"], [data-icon]
+)) {
+  word-spacing: var(--odx-ws) !important;
+}

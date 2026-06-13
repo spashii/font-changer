@@ -1,0 +1,132 @@
+/* Bundled fonts, loaded from local files (extension page resolves ../fonts/). */
+@font-face {
+  font-family: "OpenDyslexicWeb";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/opendyslexic-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "OpenDyslexicWeb";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/opendyslexic-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "LexendWeb";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/lexend-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "LexendWeb";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/lexend-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "AtkinsonHyperlegibleWeb";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/atkinson-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "AtkinsonHyperlegibleWeb";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/atkinson-700.woff2") format("woff2");
+}
+
+:root {
+  --bg: #f6eedd;
+  --card: #ffffff;
+  --fg: #23211c;
+  --muted: #6b6452;
+  --line: #e6dcc4;
+  --accent: #5b4bdb;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1e1b17;
+    --card: #26231d;
+    --fg: #f4ead5;
+    --muted: #b3a98f;
+    --line: #3a352c;
+    --accent: #8b7dff;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+.wrap {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.hero img {
+  border-radius: 14px;
+}
+
+.hero h1 {
+  margin: 12px 0 4px;
+  font-size: 28px;
+}
+
+.sub {
+  margin: 0 auto;
+  max-width: 480px;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin-bottom: 18px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.card h3 {
+  margin: 20px 0 8px;
+  font-size: 15px;
+}
+
+.card ol,
+.card ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.card li {
+  margin: 6px 0;
+}
+
+.hint {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  background: var(--bg);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--muted);
+}

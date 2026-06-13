@@ -1,0 +1,14 @@
+.DS_Store
+
+# Xcode user-specific state — never commit (the project itself IS tracked)
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+*.xcscmblueprint
+*.moved-aside
+
+# Build output
+build/
+DerivedData/
+*.ipa
+*.dSYM.zip

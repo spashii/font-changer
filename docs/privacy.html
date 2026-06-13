@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Font Changer</title>
+    <meta name="description" content="Font Changer collects no data. No tracking, no analytics, no accounts. Everything stays on your device." />
+    <meta name="theme-color" content="#f6eddd" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#181511" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon-512.png" />
+    <style>
+      :root {
+        --bg: #f6eddd; --bg-soft: #fbf4e8; --card: #fffdf8; --fg: #221f19;
+        --muted: #766d5c; --line: #e7dcc6; --accent: #b8651a; color-scheme: light dark;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root { --bg: #181511; --bg-soft: #211d16; --card: #231f18; --fg: #f3e9d4; --muted: #ada38c; --line: #36302a; --accent: #e6a35a; }
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+      a { color: var(--accent); }
+      .wrap { max-width: 680px; margin: 0 auto; padding: 0 22px; }
+      header.nav { border-bottom: 1px solid var(--line); }
+      .nav .wrap { display: flex; align-items: center; height: 60px; }
+      .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--fg); text-decoration: none; }
+      .brand .brandmark { width: 28px; height: 28px; display: block; }
+      main { padding: 48px 0 64px; }
+      h1 { font-size: clamp(28px, 5vw, 38px); letter-spacing: -0.02em; margin: 0 0 6px; }
+      .updated { color: var(--muted); font-size: 15px; margin: 0 0 28px; }
+      .lede { font-size: 19px; color: var(--fg); margin: 0 0 24px; }
+      ul { padding-left: 22px; margin: 0 0 22px; }
+      li { margin: 10px 0; }
+      .callout { background: var(--bg-soft); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; margin: 0 0 24px; }
+      .label { display: inline-block; background: var(--accent); color: #fff; font-size: 13px; font-weight: 600; padding: 3px 10px; border-radius: 999px; }
+      @media (prefers-color-scheme: dark) { .label { color: #211a10; } }
+      footer { border-top: 1px solid var(--line); padding: 28px 0; color: var(--muted); font-size: 14px; }
+      :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" aria-hidden="true" style="position: absolute"><symbol id="fc-logo" viewBox="0 0 1024 1024"><rect width="1024" height="1024" rx="210" fill="#F4EAD5" /><path fill="#23211C" d="M153.4 680.9L244.1 680.9L261.3 625.0L395.9 625.0L409.3 680.9L503.4 680.9L358.9 314.5L298.3 314.5ZM283.3 545.4L328.0 397.9L374.4 545.4ZM684.0 688.6C711.5 688.6 736.0 678.7 754.1 664.1L754.1 680.9L817.8 680.9L790.2 438.3L740.3 438.3L742.1 452.1C726.6 443.1 701.2 436.6 681.9 436.2C619.9 434.9 585.1 496.8 582.1 569.9C579.1 643.9 610.9 688.6 684.0 688.6ZM678.9 609.0C626.8 609.0 617.8 603.0 630.3 555.3C647.0 491.7 664.2 486.9 683.6 486.9C734.3 486.9 734.8 518.3 744.2 551.4C757.1 596.6 743.8 609.0 678.9 609.0Z" /></symbol></svg>
+    <header class="nav">
+      <div class="wrap"><a class="brand" href="index.html"><svg class="brandmark" aria-hidden="true"><use href="#fc-logo" /></svg>Font Changer</a></div>
+    </header>
+    <main>
+      <div class="wrap">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated 13 June 2026</p>
+
+        <p class="lede">Font Changer is built to need no information about you.</p>
+
+        <ul>
+          <li>No tracking, no analytics, no advertising, no accounts.</li>
+          <li>No data is collected, transmitted, or sold. Nothing leaves your device.</li>
+          <li>Your settings (fonts, sizes, spacing, and per-site customizations) are stored locally on your device using the browser's extension storage.</li>
+          <li>All fonts are bundled inside the app. The extension never loads fonts or any other resource from the internet.</li>
+          <li>The extension only restyles the pages you visit. It does not read, record, or transmit your browsing history or page contents.</li>
+        </ul>
+
+        <p>The website-access permission that Safari asks for is required only so the extension can apply your chosen font to the pages you view. It is used for nothing else.</p>
+
+        <div class="callout">
+          <span class="label">App Store privacy label</span>
+          <p style="margin: 10px 0 0;">Data Not Collected.</p>
+        </div>
+
+        <p>Questions? Email <a href="mailto:sameer@dembrane.com">sameer@dembrane.com</a>.</p>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap">&copy; 2026 Sameer · <a href="index.html">Home</a> · <a href="https://github.com/spashii/font-changer">GitHub</a></div>
+    </footer>
+  </body>
+</html>

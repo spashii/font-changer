@@ -1,0 +1,987 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C288EE62FDDD84F003B9DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EE52FDDD84F003B9DCA /* AppDelegate.swift */; };
+		8C288EE82FDDD84F003B9DCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EE72FDDD84F003B9DCA /* SceneDelegate.swift */; };
+		8C288EEB2FDDD84F003B9DCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C288EE92FDDD84F003B9DCA /* LaunchScreen.storyboard */; };
+		8C288EEE2FDDD84F003B9DCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C288EEC2FDDD84F003B9DCA /* Main.storyboard */; };
+		8C288EF72FDDD84F003B9DCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EF62FDDD84F003B9DCA /* AppDelegate.swift */; };
+		8C288EFA2FDDD84F003B9DCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C288EF82FDDD84F003B9DCA /* Main.storyboard */; };
+		8C288F012FDDD84F003B9DCA /* Font Changer Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8C288F002FDDD84F003B9DCA /* Font Changer Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C288F0B2FDDD84F003B9DCA /* Font Changer Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8C288F0A2FDDD84F003B9DCA /* Font Changer Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8C288F102FDDD84F003B9DCA /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED52FDDD84E003B9DCA /* Main.html */; };
+		8C288F112FDDD84F003B9DCA /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED52FDDD84E003B9DCA /* Main.html */; };
+		8C288F122FDDD84F003B9DCA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED72FDDD84E003B9DCA /* Icon.png */; };
+		8C288F132FDDD84F003B9DCA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED72FDDD84E003B9DCA /* Icon.png */; };
+		8C288F142FDDD84F003B9DCA /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED82FDDD84E003B9DCA /* Style.css */; };
+		8C288F152FDDD84F003B9DCA /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED82FDDD84E003B9DCA /* Style.css */; };
+		8C288F162FDDD84F003B9DCA /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED92FDDD84E003B9DCA /* Script.js */; };
+		8C288F172FDDD84F003B9DCA /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED92FDDD84E003B9DCA /* Script.js */; };
+		8C288F182FDDD84F003B9DCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EDA2FDDD84E003B9DCA /* ViewController.swift */; };
+		8C288F192FDDD84F003B9DCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EDA2FDDD84E003B9DCA /* ViewController.swift */; };
+		8C288F1A2FDDD84F003B9DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C288EDB2FDDD84F003B9DCA /* Assets.xcassets */; };
+		8C288F1B2FDDD84F003B9DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C288EDB2FDDD84F003B9DCA /* Assets.xcassets */; };
+		8C288F1C2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EDD2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift */; };
+		8C288F1D2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EDD2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift */; };
+		8C288F342FDDD850003B9DCA /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F2F2FDDD850003B9DCA /* icons */; };
+		8C288F352FDDD850003B9DCA /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F302FDDD850003B9DCA /* manifest.json */; };
+		8C288F362FDDD850003B9DCA /* fonts.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F312FDDD850003B9DCA /* fonts.json */; };
+		8C288F372FDDD850003B9DCA /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F322FDDD850003B9DCA /* fonts */; };
+		8C288F382FDDD850003B9DCA /* src in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F332FDDD850003B9DCA /* src */; };
+		8C288F392FDDD850003B9DCA /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F2F2FDDD850003B9DCA /* icons */; };
+		8C288F3A2FDDD850003B9DCA /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F302FDDD850003B9DCA /* manifest.json */; };
+		8C288F3B2FDDD850003B9DCA /* fonts.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F312FDDD850003B9DCA /* fonts.json */; };
+		8C288F3C2FDDD850003B9DCA /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F322FDDD850003B9DCA /* fonts */; };
+		8C288F3D2FDDD850003B9DCA /* src in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F332FDDD850003B9DCA /* src */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C288F022FDDD84F003B9DCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C288ECF2FDDD84E003B9DCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C288EFF2FDDD84F003B9DCA;
+			remoteInfo = "Font Changer Extension (iOS)";
+		};
+		8C288F0C2FDDD84F003B9DCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C288ECF2FDDD84E003B9DCA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C288F092FDDD84F003B9DCA;
+			remoteInfo = "Font Changer Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C288F232FDDD84F003B9DCA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8C288F012FDDD84F003B9DCA /* Font Changer Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C288F2A2FDDD84F003B9DCA /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8C288F0B2FDDD84F003B9DCA /* Font Changer Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8C288ED62FDDD84E003B9DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
+		8C288ED72FDDD84E003B9DCA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8C288ED82FDDD84E003B9DCA /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		8C288ED92FDDD84E003B9DCA /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		8C288EDA2FDDD84E003B9DCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8C288EDB2FDDD84F003B9DCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C288EDD2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		8C288EE22FDDD84F003B9DCA /* Font Changer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Font Changer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C288EE52FDDD84F003B9DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C288EE72FDDD84F003B9DCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8C288EEA2FDDD84F003B9DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C288EED2FDDD84F003B9DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C288EEF2FDDD84F003B9DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C288EF42FDDD84F003B9DCA /* Font Changer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Font Changer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C288EF62FDDD84F003B9DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C288EF92FDDD84F003B9DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C288EFB2FDDD84F003B9DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C288F002FDDD84F003B9DCA /* Font Changer Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Font Changer Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C288F052FDDD84F003B9DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C288F0A2FDDD84F003B9DCA /* Font Changer Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Font Changer Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C288F0F2FDDD84F003B9DCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C288F2F2FDDD850003B9DCA /* icons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icons; path = ../../../extension/icons; sourceTree = "<group>"; };
+		8C288F302FDDD850003B9DCA /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = manifest.json; path = ../../../extension/manifest.json; sourceTree = "<group>"; };
+		8C288F312FDDD850003B9DCA /* fonts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fonts.json; path = ../../../extension/fonts.json; sourceTree = "<group>"; };
+		8C288F322FDDD850003B9DCA /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../../extension/fonts; sourceTree = "<group>"; };
+		8C288F332FDDD850003B9DCA /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src; path = ../../../extension/src; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C288EDF2FDDD84F003B9DCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C288EF12FDDD84F003B9DCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C288EFD2FDDD84F003B9DCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C288F072FDDD84F003B9DCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C288ECE2FDDD84E003B9DCA = {
+			isa = PBXGroup;
+			children = (
+				8C288ED32FDDD84E003B9DCA /* Shared (App) */,
+				8C288EDC2FDDD84F003B9DCA /* Shared (Extension) */,
+				8C288EE42FDDD84F003B9DCA /* iOS (App) */,
+				8C288EF52FDDD84F003B9DCA /* macOS (App) */,
+				8C288F042FDDD84F003B9DCA /* iOS (Extension) */,
+				8C288F0E2FDDD84F003B9DCA /* macOS (Extension) */,
+				8C288EE32FDDD84F003B9DCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8C288ED32FDDD84E003B9DCA /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8C288EDA2FDDD84E003B9DCA /* ViewController.swift */,
+				8C288EDB2FDDD84F003B9DCA /* Assets.xcassets */,
+				8C288ED42FDDD84E003B9DCA /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		8C288ED42FDDD84E003B9DCA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C288ED52FDDD84E003B9DCA /* Main.html */,
+				8C288ED72FDDD84E003B9DCA /* Icon.png */,
+				8C288ED82FDDD84E003B9DCA /* Style.css */,
+				8C288ED92FDDD84E003B9DCA /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8C288EDC2FDDD84F003B9DCA /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8C288F2E2FDDD850003B9DCA /* Resources */,
+				8C288EDD2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		8C288EE32FDDD84F003B9DCA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C288EE22FDDD84F003B9DCA /* Font Changer.app */,
+				8C288EF42FDDD84F003B9DCA /* Font Changer.app */,
+				8C288F002FDDD84F003B9DCA /* Font Changer Extension.appex */,
+				8C288F0A2FDDD84F003B9DCA /* Font Changer Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C288EE42FDDD84F003B9DCA /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8C288EE52FDDD84F003B9DCA /* AppDelegate.swift */,
+				8C288EE72FDDD84F003B9DCA /* SceneDelegate.swift */,
+				8C288EE92FDDD84F003B9DCA /* LaunchScreen.storyboard */,
+				8C288EEC2FDDD84F003B9DCA /* Main.storyboard */,
+				8C288EEF2FDDD84F003B9DCA /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		8C288EF52FDDD84F003B9DCA /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8C288EF62FDDD84F003B9DCA /* AppDelegate.swift */,
+				8C288EF82FDDD84F003B9DCA /* Main.storyboard */,
+				8C288EFB2FDDD84F003B9DCA /* Info.plist */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		8C288F042FDDD84F003B9DCA /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8C288F052FDDD84F003B9DCA /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		8C288F0E2FDDD84F003B9DCA /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8C288F0F2FDDD84F003B9DCA /* Info.plist */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		8C288F2E2FDDD850003B9DCA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C288F2F2FDDD850003B9DCA /* icons */,
+				8C288F302FDDD850003B9DCA /* manifest.json */,
+				8C288F312FDDD850003B9DCA /* fonts.json */,
+				8C288F322FDDD850003B9DCA /* fonts */,
+				8C288F332FDDD850003B9DCA /* src */,
+			);
+			name = Resources;
+			path = "Shared (Extension)";
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C288EE12FDDD84F003B9DCA /* Font Changer (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C288F242FDDD84F003B9DCA /* Build configuration list for PBXNativeTarget "Font Changer (iOS)" */;
+			buildPhases = (
+				8C288EDE2FDDD84F003B9DCA /* Sources */,
+				8C288EDF2FDDD84F003B9DCA /* Frameworks */,
+				8C288EE02FDDD84F003B9DCA /* Resources */,
+				8C288F232FDDD84F003B9DCA /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C288F032FDDD84F003B9DCA /* PBXTargetDependency */,
+			);
+			name = "Font Changer (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "Font Changer (iOS)";
+			productReference = 8C288EE22FDDD84F003B9DCA /* Font Changer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C288EF32FDDD84F003B9DCA /* Font Changer (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C288F2B2FDDD84F003B9DCA /* Build configuration list for PBXNativeTarget "Font Changer (macOS)" */;
+			buildPhases = (
+				8C288EF02FDDD84F003B9DCA /* Sources */,
+				8C288EF12FDDD84F003B9DCA /* Frameworks */,
+				8C288EF22FDDD84F003B9DCA /* Resources */,
+				8C288F2A2FDDD84F003B9DCA /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C288F0D2FDDD84F003B9DCA /* PBXTargetDependency */,
+			);
+			name = "Font Changer (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "Font Changer (macOS)";
+			productReference = 8C288EF42FDDD84F003B9DCA /* Font Changer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C288EFF2FDDD84F003B9DCA /* Font Changer Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C288F202FDDD84F003B9DCA /* Build configuration list for PBXNativeTarget "Font Changer Extension (iOS)" */;
+			buildPhases = (
+				8C288EFC2FDDD84F003B9DCA /* Sources */,
+				8C288EFD2FDDD84F003B9DCA /* Frameworks */,
+				8C288EFE2FDDD84F003B9DCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Font Changer Extension (iOS)";
+			packageProductDependencies = (
+			);
+			productName = "Font Changer Extension (iOS)";
+			productReference = 8C288F002FDDD84F003B9DCA /* Font Changer Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		8C288F092FDDD84F003B9DCA /* Font Changer Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C288F272FDDD84F003B9DCA /* Build configuration list for PBXNativeTarget "Font Changer Extension (macOS)" */;
+			buildPhases = (
+				8C288F062FDDD84F003B9DCA /* Sources */,
+				8C288F072FDDD84F003B9DCA /* Frameworks */,
+				8C288F082FDDD84F003B9DCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Font Changer Extension (macOS)";
+			packageProductDependencies = (
+			);
+			productName = "Font Changer Extension (macOS)";
+			productReference = 8C288F0A2FDDD84F003B9DCA /* Font Changer Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C288ECF2FDDD84E003B9DCA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2650;
+				LastUpgradeCheck = 2650;
+				TargetAttributes = {
+					8C288EE12FDDD84F003B9DCA = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					8C288EF32FDDD84F003B9DCA = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					8C288EFF2FDDD84F003B9DCA = {
+						CreatedOnToolsVersion = 26.5;
+					};
+					8C288F092FDDD84F003B9DCA = {
+						CreatedOnToolsVersion = 26.5;
+					};
+				};
+			};
+			buildConfigurationList = 8C288ED22FDDD84E003B9DCA /* Build configuration list for PBXProject "Font Changer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C288ECE2FDDD84E003B9DCA;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 8C288EE32FDDD84F003B9DCA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C288EE12FDDD84F003B9DCA /* Font Changer (iOS) */,
+				8C288EF32FDDD84F003B9DCA /* Font Changer (macOS) */,
+				8C288EFF2FDDD84F003B9DCA /* Font Changer Extension (iOS) */,
+				8C288F092FDDD84F003B9DCA /* Font Changer Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C288EE02FDDD84F003B9DCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C288F122FDDD84F003B9DCA /* Icon.png in Resources */,
+				8C288EEB2FDDD84F003B9DCA /* LaunchScreen.storyboard in Resources */,
+				8C288F102FDDD84F003B9DCA /* Main.html in Resources */,
+				8C288F162FDDD84F003B9DCA /* Script.js in Resources */,
+				8C288F1A2FDDD84F003B9DCA /* Assets.xcassets in Resources */,
+				8C288EEE2FDDD84F003B9DCA /* Main.storyboard in Resources */,
+				8C288F142FDDD84F003B9DCA /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C288EF22FDDD84F003B9DCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C288F132FDDD84F003B9DCA /* Icon.png in Resources */,
+				8C288F152FDDD84F003B9DCA /* Style.css in Resources */,
+				8C288EFA2FDDD84F003B9DCA /* Main.storyboard in Resources */,
+				8C288F172FDDD84F003B9DCA /* Script.js in Resources */,
+				8C288F1B2FDDD84F003B9DCA /* Assets.xcassets in Resources */,
+				8C288F112FDDD84F003B9DCA /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C288EFE2FDDD84F003B9DCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C288F3B2FDDD850003B9DCA /* fonts.json in Resources */,
+				8C288F3A2FDDD850003B9DCA /* manifest.json in Resources */,
+				8C288F392FDDD850003B9DCA /* icons in Resources */,
+				8C288F3C2FDDD850003B9DCA /* fonts in Resources */,
+				8C288F3D2FDDD850003B9DCA /* src in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C288F082FDDD84F003B9DCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C288F362FDDD850003B9DCA /* fonts.json in Resources */,
+				8C288F352FDDD850003B9DCA /* manifest.json in Resources */,
+				8C288F342FDDD850003B9DCA /* icons in Resources */,
+				8C288F372FDDD850003B9DCA /* fonts in Resources */,
+				8C288F382FDDD850003B9DCA /* src in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C288EDE2FDDD84F003B9DCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C288F182FDDD84F003B9DCA /* ViewController.swift in Sources */,
+				8C288EE62FDDD84F003B9DCA /* AppDelegate.swift in Sources */,
+				8C288EE82FDDD84F003B9DCA /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C288EF02FDDD84F003B9DCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C288F192FDDD84F003B9DCA /* ViewController.swift in Sources */,
+				8C288EF72FDDD84F003B9DCA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C288EFC2FDDD84F003B9DCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C288F1C2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C288F062FDDD84F003B9DCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C288F1D2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C288F032FDDD84F003B9DCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C288EFF2FDDD84F003B9DCA /* Font Changer Extension (iOS) */;
+			targetProxy = 8C288F022FDDD84F003B9DCA /* PBXContainerItemProxy */;
+		};
+		8C288F0D2FDDD84F003B9DCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C288F092FDDD84F003B9DCA /* Font Changer Extension (macOS) */;
+			targetProxy = 8C288F0C2FDDD84F003B9DCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C288ED52FDDD84E003B9DCA /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C288ED62FDDD84E003B9DCA /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		8C288EE92FDDD84F003B9DCA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C288EEA2FDDD84F003B9DCA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8C288EEC2FDDD84F003B9DCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C288EED2FDDD84F003B9DCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8C288EF82FDDD84F003B9DCA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C288EF92FDDD84F003B9DCA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C288F1E2FDDD84F003B9DCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C288F1F2FDDD84F003B9DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		8C288F212FDDD84F003B9DCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger.Extension;
+				PRODUCT_NAME = "Font Changer Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C288F222FDDD84F003B9DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger.Extension;
+				PRODUCT_NAME = "Font Changer Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C288F252FDDD84F003B9DCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger;
+				PRODUCT_NAME = "Font Changer";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8C288F262FDDD84F003B9DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger;
+				PRODUCT_NAME = "Font Changer";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C288F282FDDD84F003B9DCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger.Extension;
+				PRODUCT_NAME = "Font Changer Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8C288F292FDDD84F003B9DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger.Extension;
+				PRODUCT_NAME = "Font Changer Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8C288F2C2FDDD84F003B9DCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger;
+				PRODUCT_NAME = "Font Changer";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8C288F2D2FDDD84F003B9DCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger;
+				PRODUCT_NAME = "Font Changer";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C288ED22FDDD84E003B9DCA /* Build configuration list for PBXProject "Font Changer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C288F1E2FDDD84F003B9DCA /* Debug */,
+				8C288F1F2FDDD84F003B9DCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C288F202FDDD84F003B9DCA /* Build configuration list for PBXNativeTarget "Font Changer Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C288F212FDDD84F003B9DCA /* Debug */,
+				8C288F222FDDD84F003B9DCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C288F242FDDD84F003B9DCA /* Build configuration list for PBXNativeTarget "Font Changer (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C288F252FDDD84F003B9DCA /* Debug */,
+				8C288F262FDDD84F003B9DCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C288F272FDDD84F003B9DCA /* Build configuration list for PBXNativeTarget "Font Changer Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C288F282FDDD84F003B9DCA /* Debug */,
+				8C288F292FDDD84F003B9DCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C288F2B2FDDD84F003B9DCA /* Build configuration list for PBXNativeTarget "Font Changer (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C288F2C2FDDD84F003B9DCA /* Debug */,
+				8C288F2D2FDDD84F003B9DCA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C288ECF2FDDD84E003B9DCA /* Project object */;
+}

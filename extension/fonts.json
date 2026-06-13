@@ -1,0 +1,36 @@
+{
+  "fonts": [
+    {
+      "key": "opendyslexic",
+      "label": "OpenDyslexic",
+      "family": "OpenDyslexicWeb",
+      "license": "SIL OFL 1.1",
+      "faces": [
+        { "weight": 400, "style": "normal", "file": "fonts/opendyslexic-400.woff2" },
+        { "weight": 700, "style": "normal", "file": "fonts/opendyslexic-700.woff2" },
+        { "weight": 400, "style": "italic", "file": "fonts/opendyslexic-400i.woff2" },
+        { "weight": 700, "style": "italic", "file": "fonts/opendyslexic-700i.woff2" }
+      ]
+    },
+    {
+      "key": "lexend",
+      "label": "Lexend",
+      "family": "LexendWeb",
+      "license": "SIL OFL 1.1",
+      "faces": [
+        { "weight": 400, "style": "normal", "file": "fonts/lexend-400.woff2" },
+        { "weight": 700, "style": "normal", "file": "fonts/lexend-700.woff2" }
+      ]
+    },
+    {
+      "key": "atkinson",
+      "label": "Atkinson Hyperlegible",
+      "family": "AtkinsonHyperlegibleWeb",
+      "license": "SIL OFL 1.1",
+      "faces": [
+        { "weight": 400, "style": "normal", "file": "fonts/atkinson-400.woff2" },
+        { "weight": 700, "style": "normal", "file": "fonts/atkinson-700.woff2" }
+      ]
+    }
+  ]
+}
