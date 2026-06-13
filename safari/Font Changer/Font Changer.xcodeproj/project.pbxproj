@@ -27,6 +27,8 @@
 		8C288F192FDDD84F003B9DCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EDA2FDDD84E003B9DCA /* ViewController.swift */; };
 		8C288F1A2FDDD84F003B9DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C288EDB2FDDD84F003B9DCA /* Assets.xcassets */; };
 		8C288F1B2FDDD84F003B9DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C288EDB2FDDD84F003B9DCA /* Assets.xcassets */; };
+		8CA1C0DE0000000000000002 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8CA1C0DE0000000000000001 /* AppIcon.icon */; };
+		8CA1C0DE0000000000000003 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8CA1C0DE0000000000000001 /* AppIcon.icon */; };
 		8C288F1C2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EDD2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift */; };
 		8C288F1D2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EDD2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift */; };
 		8C288F342FDDD850003B9DCA /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F2F2FDDD850003B9DCA /* icons */; };
@@ -90,6 +92,7 @@
 		8C288ED92FDDD84E003B9DCA /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
 		8C288EDA2FDDD84E003B9DCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C288EDB2FDDD84F003B9DCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CA1C0DE0000000000000001 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		8C288EDD2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		8C288EE22FDDD84F003B9DCA /* Font Changer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Font Changer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C288EE52FDDD84F003B9DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 			children = (
 				8C288EDA2FDDD84E003B9DCA /* ViewController.swift */,
 				8C288EDB2FDDD84F003B9DCA /* Assets.xcassets */,
+				8CA1C0DE0000000000000001 /* AppIcon.icon */,
 				8C288ED42FDDD84E003B9DCA /* Resources */,
 			);
 			path = "Shared (App)";
@@ -388,6 +392,7 @@
 				8C288F102FDDD84F003B9DCA /* Main.html in Resources */,
 				8C288F162FDDD84F003B9DCA /* Script.js in Resources */,
 				8C288F1A2FDDD84F003B9DCA /* Assets.xcassets in Resources */,
+				8CA1C0DE0000000000000002 /* AppIcon.icon in Resources */,
 				8C288EEE2FDDD84F003B9DCA /* Main.storyboard in Resources */,
 				8C288F142FDDD84F003B9DCA /* Style.css in Resources */,
 			);
@@ -402,6 +407,7 @@
 				8C288EFA2FDDD84F003B9DCA /* Main.storyboard in Resources */,
 				8C288F172FDDD84F003B9DCA /* Script.js in Resources */,
 				8C288F1B2FDDD84F003B9DCA /* Assets.xcassets in Resources */,
+				8CA1C0DE0000000000000003 /* AppIcon.icon in Resources */,
 				8C288F112FDDD84F003B9DCA /* Main.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -638,6 +644,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JMCP69LCSU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer Extension";
@@ -653,7 +660,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.tangerinetech.fontchanger.Extension;
 				PRODUCT_NAME = "Font Changer Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -671,6 +678,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JMCP69LCSU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer Extension";
@@ -686,7 +694,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.tangerinetech.fontchanger.Extension;
 				PRODUCT_NAME = "Font Changer Extension";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -707,6 +715,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JMCP69LCSU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer";
@@ -727,7 +736,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.tangerinetech.fontchanger;
 				PRODUCT_NAME = "Font Changer";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -747,6 +756,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JMCP69LCSU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer";
@@ -767,7 +777,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.tangerinetech.fontchanger;
 				PRODUCT_NAME = "Font Changer";
 				SDKROOT = iphoneos;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -804,7 +814,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.tangerinetech.fontchanger.Extension;
 				PRODUCT_NAME = "Font Changer Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -839,7 +849,7 @@
 					"-framework",
 					SafariServices,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger.Extension;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.tangerinetech.fontchanger.Extension;
 				PRODUCT_NAME = "Font Changer Extension";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -879,7 +889,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.tangerinetech.fontchanger;
 				PRODUCT_NAME = "Font Changer";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;
@@ -920,7 +930,7 @@
 					"-framework",
 					WebKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.sameer.fontchanger;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.tangerinetech.fontchanger;
 				PRODUCT_NAME = "Font Changer";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = macosx;

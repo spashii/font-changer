@@ -5,6 +5,8 @@
   --muted: #6b6452;
   --line: #e6dcc4;
   --accent: #b8651a;
+  --accent-soft: #f4e7d4;
+  --field: #f4eede;
   --danger: #9a3412;
   color-scheme: light dark;
 }
@@ -17,6 +19,8 @@
     --muted: #b3a98f;
     --line: #3a352c;
     --accent: #e6a35a;
+    --accent-soft: #3a2f20;
+    --field: #2a261f;
     --danger: #f0a080;
   }
 }
@@ -74,20 +78,26 @@ body {
   font-size: 14px;
 }
 
-.def {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+/* Live preview of the current defaults; the font, size, line-height and
+   spacing are set inline by manage.js (mirrors what content.js does to pages). */
+.preview {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 18px;
+  background: var(--bg);
 }
-.def li {
-  display: flex;
-  justify-content: space-between;
-  padding: 7px 0;
-  border-top: 1px solid var(--line);
-  font-size: 15px;
+.preview-h {
+  margin: 0 0 8px;
+  font-size: 1.2em;
 }
-.def li:first-child {
-  border-top: 0;
+.preview p {
+  margin: 0 0 10px;
+}
+.preview > :last-child {
+  margin-bottom: 0;
+}
+.preview a {
+  color: var(--accent);
 }
 
 .site {

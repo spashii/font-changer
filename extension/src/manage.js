@@ -1,6 +1,7 @@
-// "View all customizations" manager. Lists your defaults and every site that
-// has overrides, with whole-site actions. Per-setting editing happens in the
-// popup when you are on that site. Everything is local to this device.
+// "View all customizations" manager. Lets you edit your defaults inline (same
+// controls as the popup, via editor.js) with a live preview, and lists every
+// site that has overrides with whole-site actions. Everything is local to this
+// device.
 (function () {
   let fonts = [];
 
@@ -15,18 +16,6 @@
   const numText = (v) => (v == null ? null : String(v));
   const emText = (v) => (v == null ? null : v + "em");
 
-  function defLine(label, val) {
-    const li = document.createElement("li");
-    const a = document.createElement("span");
-    a.textContent = label;
-    const b = document.createElement("span");
-    b.textContent = val == null ? "No change" : val;
-    if (val == null) b.style.color = "var(--muted)";
-    li.appendChild(a);
-    li.appendChild(b);
-    return li;
-  }
-
   function actBtn(label, fn, danger) {
     const b = document.createElement("button");
     b.type = "button";
@@ -36,19 +25,24 @@
     return b;
   }
 
-  async function render() {
-    const config = await odxLoadConfig();
+  // --- live preview: mirror how content.js styles a page, on the sample text ---
+  const faceStyle = document.createElement("style");
+  faceStyle.id = "odx-preview-face";
+  document.head.appendChild(faceStyle);
+
+  function applyPreview(d) {
+    const { familyCss, font } = odxResolveFont(d.font, d.customFont, fonts);
+    faceStyle.textContent = font ? odxFaceCss(font, (p) => odxApi.runtime.getURL(p)) : "";
+    const el = document.getElementById("preview");
+    el.style.fontFamily = familyCss + ", sans-serif";
+    el.style.fontSize = (d.sizePct != null ? d.sizePct : 100) + "%";
+    el.style.lineHeight = d.lineHeight != null ? String(d.lineHeight) : "";
+    el.style.letterSpacing = d.letterSpacing != null ? d.letterSpacing + "em" : "";
+    el.style.wordSpacing = d.wordSpacing != null ? d.wordSpacing + "em" : "";
+  }
+
+  function renderSites(config) {
     const d = config.defaults;
-
-    const dl = document.getElementById("def-list");
-    dl.innerHTML = "";
-    dl.appendChild(defLine("Status", d.enabled ? "On" : "Off"));
-    dl.appendChild(defLine("Font", fontLabel(d.font, d.customFont)));
-    dl.appendChild(defLine("Text size", sizeText(d.sizePct)));
-    dl.appendChild(defLine("Line height", numText(d.lineHeight)));
-    dl.appendChild(defLine("Letter spacing", emText(d.letterSpacing)));
-    dl.appendChild(defLine("Word spacing", emText(d.wordSpacing)));
-
     const wrap = document.getElementById("sites");
     wrap.innerHTML = "";
     const hosts = Object.keys(config.siteRules).sort();
@@ -110,6 +104,28 @@
     }
   }
 
+  async function render() {
+    const config = await odxLoadConfig();
+    const d = config.defaults;
+
+    document.getElementById("def-enabled").checked = !!d.enabled;
+    odxEditor.buildRows(document.getElementById("def-rows"), {
+      view: d,
+      fonts,
+      onChange: (key, value) => odxSetDefault(key, value),
+    });
+    applyPreview(d);
+
+    renderSites(config);
+  }
+
+  // The toggle element persists across renders, so wire it up once.
+  document.getElementById("def-enabled").addEventListener("change", (e) => {
+    odxSetDefault("enabled", e.target.checked);
+  });
+
+  // Every write (here or from the popup on another tab) re-renders, keeping the
+  // preview and the site list in sync.
   odxApi.storage.onChanged.addListener((_c, area) => {
     if (area === "local") render();
   });

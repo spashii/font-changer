@@ -53,7 +53,7 @@ the resources in):
 
 ```sh
 xcrun safari-web-extension-converter ~/Documents/spashii/safari-ext-font-changer/extension \
-  --app-name "Font Changer" --bundle-identifier dev.sameer.fontchanger \
+  --app-name "Font Changer" --bundle-identifier eu.tangerinetech.fontchanger \
   --project-location ~/Documents/spashii/safari-ext-font-changer/safari
 ```
 

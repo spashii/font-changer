@@ -11,20 +11,6 @@
     undo: $("odx-undo"), resetSite: $("odx-reset-site"), help: $("odx-help"), viewAll: $("odx-viewall"),
   };
 
-  // Each slider is centred on `center`, which means "no change" (stored as null).
-  // Range is symmetric around the centre so the default sits at the midpoint.
-  const RANGE = {
-    sizePct: { min: 50, max: 150, step: 5, numStep: 1, unit: "%", round: 0, center: 100 },
-    lineHeight: { min: 1.0, max: 2.0, step: 0.1, numStep: 0.1, unit: "", round: 2, center: 1.5 },
-    letterSpacing: { min: -0.1, max: 0.1, step: 0.01, numStep: 0.01, unit: "em", round: 2, center: 0 },
-    wordSpacing: { min: -0.2, max: 0.2, step: 0.05, numStep: 0.05, unit: "em", round: 2, center: 0 },
-  };
-  const RANGE_ROWS = [["sizePct", "Text size"], ["lineHeight", "Line height"], ["letterSpacing", "Letter spacing"], ["wordSpacing", "Word spacing"]];
-
-  const fromStore = (cfg, v) => (v == null ? cfg.center : v);
-  const toStore = (cfg, v) => (Math.abs(v - cfg.center) < cfg.step / 2 ? null : +v.toFixed(cfg.round));
-  const showNum = (cfg, v) => (cfg.round ? +v.toFixed(cfg.round) : Math.round(v));
-
   let currentHost = "", ctx = "site", config = null, fonts = [], snapshot = null;
   const clone = (o) => JSON.parse(JSON.stringify(o));
 
@@ -91,79 +77,6 @@
     return head;
   }
 
-  function fontRow(view) {
-    const row = document.createElement("div");
-    row.className = "odx-prow";
-    row.appendChild(headFor("Font", "font"));
-    const sel = document.createElement("select");
-    sel.setAttribute("aria-label", "Font");
-    for (const f of fonts) sel.add(new Option(f.label, f.key));
-    sel.add(new Option("System default", "system"));
-    sel.add(new Option("Font on this device…", "custom"));
-    sel.value = view.font;
-    sel.addEventListener("change", () => writeSetting("font", sel.value));
-    row.appendChild(sel);
-    if (view.font === "custom") {
-      const inp = document.createElement("input");
-      inp.type = "text";
-      inp.placeholder = "e.g. Georgia, Verdana, a font you have";
-      inp.value = view.customFont || "";
-      inp.setAttribute("aria-label", "Font on this device");
-      inp.addEventListener("change", () => writeSetting("customFont", inp.value.trim()));
-      row.appendChild(inp);
-    }
-    return row;
-  }
-
-  function rangeRow(key, label, storedVal) {
-    const cfg = RANGE[key];
-    const cur = fromStore(cfg, storedVal);
-    const row = document.createElement("div");
-    row.className = "odx-prow";
-    const head = headFor(label, key);
-
-    const wrap = document.createElement("span");
-    wrap.className = "odx-numwrap";
-    const num = document.createElement("input");
-    num.type = "number";
-    num.className = "odx-num";
-    num.min = cfg.min;
-    num.max = cfg.max;
-    num.step = cfg.numStep;
-    num.value = showNum(cfg, cur);
-    num.setAttribute("aria-label", label + " value");
-    wrap.appendChild(num);
-    if (cfg.unit) {
-      const u = document.createElement("span");
-      u.className = "odx-unit";
-      u.textContent = cfg.unit;
-      wrap.appendChild(u);
-    }
-    head.appendChild(wrap);
-    row.appendChild(head);
-
-    const r = document.createElement("input");
-    r.type = "range";
-    r.min = cfg.min;
-    r.max = cfg.max;
-    r.step = cfg.step;
-    r.value = cur;
-    r.setAttribute("aria-label", label);
-    row.appendChild(r);
-
-    const clamp = (v) => Math.min(cfg.max, Math.max(cfg.min, isNaN(v) ? cfg.center : v));
-    r.addEventListener("input", () => {
-      num.value = showNum(cfg, Number(r.value));
-    });
-    r.addEventListener("change", () => writeSetting(key, toStore(cfg, clamp(Number(r.value)))));
-    num.addEventListener("change", () => {
-      const v = clamp(Number(num.value));
-      r.value = v;
-      writeSetting(key, toStore(cfg, v));
-    });
-    return row;
-  }
-
   function render() {
     const { eff, customized } = odxEffective(config, currentHost);
     ui.host.textContent = currentHost || "this page";
@@ -187,9 +100,7 @@
     ui.ctxDef.setAttribute("aria-selected", String(ctx === "defaults"));
 
     const view = ctx === "site" ? eff : config.defaults;
-    ui.rows.innerHTML = "";
-    ui.rows.appendChild(fontRow(view));
-    for (const [key, label] of RANGE_ROWS) ui.rows.appendChild(rangeRow(key, label, view[key]));
+    odxEditor.buildRows(ui.rows, { view, fonts, onChange: writeSetting, headFn: headFor });
 
     const n = odxModCount(eff);
     ui.summary.textContent = ctx === "site" && !currentHost ? "Open a normal web page to use this." : !eff.enabled ? "Off on this site." : n + (n === 1 ? " setting" : " settings") + " changing this page.";

@@ -1,0 +1,21 @@
+{
+  "fill" : { "solid" : "display-p3:0.957,0.918,0.835,1" },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "image-name" : "Logo.svg",
+          "name" : "Logo",
+          "position" : { "scale" : 0.82, "translation-in-points" : [ 0, 0 ] }
+        }
+      ],
+      "shadow" : { "kind" : "neutral", "opacity" : 0.5 },
+      "specular" : true,
+      "translucency" : { "enabled" : true, "value" : 0.5 }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [ "watchOS" ],
+    "squares" : [ "iOS", "macOS" ]
+  }
+}

@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Font Changer — Customizations</title>
+    <link rel="stylesheet" href="editor.css" />
     <link rel="stylesheet" href="manage.css" />
   </head>
   <body>
     <main class="wrap">
       <header class="hero">
-        <img src="../icons/icon-128.png" width="48" height="48" alt="" />
+        <img src="../icons/icon-512.png" width="48" height="48" alt="" />
         <div>
           <h1>Customizations</h1>
           <p class="sub">Everything Font Changer is doing, kept on this device.</p>
@@ -18,8 +19,28 @@
 
       <section class="card">
         <h2>Defaults</h2>
-        <p class="note">Used on every site unless that site is customized.</p>
-        <ul class="def" id="def-list"></ul>
+        <p class="note">Used on every site unless that site is customized. Changes apply everywhere right away.</p>
+
+        <label class="odx-row" for="def-enabled">
+          <span class="odx-label">Enabled by default</span>
+          <input type="checkbox" id="def-enabled" class="odx-switch" role="switch" aria-label="Enabled by default" />
+        </label>
+
+        <div id="def-rows"></div>
+      </section>
+
+      <section class="card">
+        <h2>Preview</h2>
+        <p class="note">Sample text shown with your current defaults.</p>
+        <div class="preview" id="preview">
+          <h3 class="preview-h">The five boxing wizards jump quickly</h3>
+          <p>
+            Readable type makes a real difference. Pack my box with five dozen liquor
+            jugs — 0123456789. “Quoting,” em–dashes, and a
+            <a>sample link</a> all use your default font.
+          </p>
+          <p>The quick brown fox jumps over the lazy dog.</p>
+        </div>
       </section>
 
       <section class="card">
@@ -29,6 +50,7 @@
     </main>
 
     <script src="common.js"></script>
+    <script src="editor.js"></script>
     <script src="manage.js"></script>
   </body>
 </html>
