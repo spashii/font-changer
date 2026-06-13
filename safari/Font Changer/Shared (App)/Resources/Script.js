@@ -17,8 +17,16 @@ function show(platform, enabled, useSettingsInsteadOfPreferences) {
     }
 }
 
-function openPreferences() {
-    webkit.messageHandlers.controller.postMessage("open-preferences");
+function send(action) {
+    webkit.messageHandlers.controller.postMessage(action);
 }
 
-document.querySelector("button.open-preferences").addEventListener("click", openPreferences);
+function wire(selector, action) {
+    const el = document.querySelector(selector);
+    if (el) el.addEventListener("click", () => send(action));
+}
+
+wire("button.open-preferences", "open-preferences");
+wire("button.open-settings", "open-settings");
+wire("button.rate-app", "rate-app");
+wire("button.star-repo", "star-repo");

@@ -59,3 +59,33 @@ body.state-off :is(.state-on, .state-unknown) {
 button {
     font-size: 1em;
 }
+
+button.primary {
+    padding: 9px 20px;
+    border: none;
+    border-radius: 12px;
+    background: light-dark(#b8651a, #e6a35a);
+    color: light-dark(#ffffff, #1e1b17);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: var(--spacing);
+}
+
+button.link {
+    border: none;
+    background: none;
+    padding: 4px 8px;
+    font-size: 0.95em;
+    color: light-dark(#b8651a, #e6a35a);
+    cursor: pointer;
+}
+button.link:hover {
+    text-decoration: underline;
+}

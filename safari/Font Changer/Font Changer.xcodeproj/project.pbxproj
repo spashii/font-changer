@@ -17,8 +17,6 @@
 		8C288F0B2FDDD84F003B9DCA /* Font Changer Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8C288F0A2FDDD84F003B9DCA /* Font Changer Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8C288F102FDDD84F003B9DCA /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED52FDDD84E003B9DCA /* Main.html */; };
 		8C288F112FDDD84F003B9DCA /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED52FDDD84E003B9DCA /* Main.html */; };
-		8C288F122FDDD84F003B9DCA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED72FDDD84E003B9DCA /* Icon.png */; };
-		8C288F132FDDD84F003B9DCA /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED72FDDD84E003B9DCA /* Icon.png */; };
 		8C288F142FDDD84F003B9DCA /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED82FDDD84E003B9DCA /* Style.css */; };
 		8C288F152FDDD84F003B9DCA /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED82FDDD84E003B9DCA /* Style.css */; };
 		8C288F162FDDD84F003B9DCA /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C288ED92FDDD84E003B9DCA /* Script.js */; };
@@ -87,7 +85,6 @@
 
 /* Begin PBXFileReference section */
 		8C288ED62FDDD84E003B9DCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = Base.lproj/Main.html; sourceTree = "<group>"; };
-		8C288ED72FDDD84E003B9DCA /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		8C288ED82FDDD84E003B9DCA /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
 		8C288ED92FDDD84E003B9DCA /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
 		8C288EDA2FDDD84E003B9DCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -175,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				8C288ED52FDDD84E003B9DCA /* Main.html */,
-				8C288ED72FDDD84E003B9DCA /* Icon.png */,
 				8C288ED82FDDD84E003B9DCA /* Style.css */,
 				8C288ED92FDDD84E003B9DCA /* Script.js */,
 			);
@@ -387,7 +383,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C288F122FDDD84F003B9DCA /* Icon.png in Resources */,
 				8C288EEB2FDDD84F003B9DCA /* LaunchScreen.storyboard in Resources */,
 				8C288F102FDDD84F003B9DCA /* Main.html in Resources */,
 				8C288F162FDDD84F003B9DCA /* Script.js in Resources */,
@@ -402,7 +397,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C288F132FDDD84F003B9DCA /* Icon.png in Resources */,
 				8C288F152FDDD84F003B9DCA /* Style.css in Resources */,
 				8C288EFA2FDDD84F003B9DCA /* Main.storyboard in Resources */,
 				8C288F172FDDD84F003B9DCA /* Script.js in Resources */,

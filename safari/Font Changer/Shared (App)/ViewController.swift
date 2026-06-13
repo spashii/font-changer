@@ -18,6 +18,13 @@ typealias PlatformViewController = NSViewController
 
 let extensionBundleIdentifier = "eu.tangerinetech.fontchanger.Extension"
 
+let repoURL = "https://github.com/spashii/font-changer"
+// TODO: set the real numeric App Store id once published. The
+// ?action=write-review query opens the App Store review sheet directly,
+// Apple's recommended deep link for an explicit "rate us" button.
+let appStoreID = "0000000000"
+let appStoreReviewURL = "https://apps.apple.com/app/id\(appStoreID)?action=write-review"
+
 class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMessageHandler {
 
     @IBOutlet var webView: WKWebView!
@@ -60,20 +67,43 @@ class ViewController: PlatformViewController, WKNavigationDelegate, WKScriptMess
     }
 
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-#if os(macOS)
-        if (message.body as! String != "open-preferences") {
-            return
+        guard let action = message.body as? String else { return }
+
+#if os(iOS)
+        func open(_ string: String) {
+            if let url = URL(string: string) { UIApplication.shared.open(url) }
         }
+        switch action {
+        case "open-settings":
+            // Opens this app's page in Settings; from there the user reaches
+            // Safari → Extensions to enable Font Changer.
+            open(UIApplication.openSettingsURLString)
+        case "rate-app":
+            open(appStoreReviewURL)
+        case "star-repo":
+            open(repoURL)
+        default:
+            break
+        }
+#elseif os(macOS)
+        switch action {
+        case "open-preferences":
+            SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier) { error in
+                guard error == nil else {
+                    // Insert code to inform the user that something went wrong.
+                    return
+                }
 
-        SFSafariApplication.showPreferencesForExtension(withIdentifier: extensionBundleIdentifier) { error in
-            guard error == nil else {
-                // Insert code to inform the user that something went wrong.
-                return
+                DispatchQueue.main.async {
+                    NSApp.terminate(self)
+                }
             }
-
-            DispatchQueue.main.async {
-                NSApp.terminate(self)
-            }
+        case "rate-app":
+            if let url = URL(string: appStoreReviewURL) { NSWorkspace.shared.open(url) }
+        case "star-repo":
+            if let url = URL(string: repoURL) { NSWorkspace.shared.open(url) }
+        default:
+            break
         }
 #endif
     }
