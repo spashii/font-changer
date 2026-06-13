@@ -1,60 +1,55 @@
 # App Store listing — Font Changer
 
-Copy for App Store Connect. Character limits noted; counts are for the text as
-written. Keep it factual, not promotional.
+Tuned for organic search (ASO) + conversion. Search ranking weights Title >
+Subtitle > Keywords, and each word is indexed once — so none of these three
+repeat a word. The first ~2 description lines and the screenshots do the
+converting. Honest, concrete, no hype (hype lowers trust and risks review).
 
 ## Name (≤30)
-Font Changer
+Font Changer: Readable Fonts
 
 ## Subtitle (≤30)
-Readable fonts for Safari
+Make the web easier to read
+
+## Keywords (≤100, comma-separated, no spaces; no word repeated from Name/Subtitle)
+dyslexia,opendyslexic,lexend,atkinson,reader,reading,accessibility,low vision,text size,legible
 
 ## Promotional text (≤170, updatable without review)
-Make any website easier to read. Pick a readable font and adjust the size and
-spacing — it applies everywhere automatically. Nothing leaves your device.
+Swap any website's text to a font you can actually read — OpenDyslexic, Lexend, or Atkinson Hyperlegible — and size it your way. On by default. Private. Free.
 
 ## Description (≤4000)
-Font Changer restyles the text of web pages in Safari so they are easier to
-read. Pick a font, adjust the size and spacing, and it applies on every site
-automatically.
+Some websites are a strain to read. Font Changer fixes that.
 
-Fonts included:
-- OpenDyslexic
-- Lexend
-- Atkinson Hyperlegible
-- The system font, or any font installed on your device
+Pick a font that works for you, and Font Changer applies it across the web — automatically, on every site you visit. Tune the size and spacing once and forget about it.
 
-What you can change:
-- Font
-- Text size
-- Line height
-- Letter and word spacing
+INCLUDED FONTS
+• OpenDyslexic — designed to make letters easier to tell apart
+• Lexend — built for reading fluency
+• Atkinson Hyperlegible — high-clarity letterforms
+• Or the system font, or any font already installed on your device
 
-How it works:
-- On by default on every site. Turn it off for any site with one tap.
-- Your defaults apply everywhere. Any site can override just the settings you
-  change; the rest stay inherited from your defaults.
-- Code blocks and icon fonts are left alone.
+MAKE IT YOURS
+• Text size
+• Line height
+• Letter and word spacing
+• Per-site control: on everywhere by default, off anywhere you want with one tap
 
-Privacy:
-- No tracking, no analytics, no advertising, no accounts.
-- The fonts are bundled in the app. The extension never loads anything from the
-  internet.
-- Your settings stay on your device.
+SET IT ONCE
+Your defaults apply to every site. Any site can override just the settings you change — the rest stay inherited. Code blocks and icons are left untouched.
 
-Font Changer is open source under the MIT license. The included fonts are used
-under the SIL Open Font License. Not affiliated with or endorsed by the
-OpenDyslexic, Lexend, or Atkinson Hyperlegible projects.
+PRIVATE BY DESIGN
+• No tracking, no analytics, no ads, no account
+• Fonts are bundled in the app — nothing is ever loaded from the internet
+• Your settings never leave your device
 
-## Keywords (≤100, comma-separated, no spaces)
-dyslexia,opendyslexic,lexend,atkinson,readable,reading,text size,line spacing,accessibility,legible
+Font Changer is free and open source (MIT). Fonts are used under the SIL Open Font License. Not affiliated with or endorsed by the OpenDyslexic, Lexend, or Atkinson Hyperlegible projects.
 
 ## What's New (release notes)
 First release.
 
 ## URLs
 - Support URL: https://github.com/spashii/font-changer
-- Marketing URL: <the docs site, e.g. https://your-domain/>
+- Marketing URL: <the docs site>
 - Privacy Policy URL: <the docs site>/privacy.html
 
 ## Categories
@@ -68,5 +63,12 @@ First release.
 Data Not Collected. (See REVIEW_NOTES.md and PRIVACY.md.)
 
 ## Review notes
-Use the contents of REVIEW_NOTES.md (explains why the extension needs access to
-all websites, and how to enable and test it).
+Paste REVIEW_NOTES.md (explains the all-sites access and how to enable/test).
+
+## ASO follow-ups that move installs (in order of impact)
+1. Screenshots — the #1 conversion lever. See SCREENSHOTS.md; the first frame
+   must show before/after in under a second.
+2. Ratings prompt — ask happy users in-app (SKStoreReviewController) after a few
+   sessions. Not added yet; cheap win post-launch.
+3. Localize the Title/Subtitle/Keywords for a couple of large non-English
+   markets later — each locale is a separate keyword pool.
