@@ -15,6 +15,11 @@
     <meta property="og:image" content="og.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <style>
+      /* We use our own: the site is set in Lexend (bundled, self-hosted). */
+      @font-face { font-family: "Lexend"; font-weight: 400; font-display: swap;
+        src: url("fonts/lexend-400.woff2") format("woff2"); }
+      @font-face { font-family: "Lexend"; font-weight: 700; font-display: swap;
+        src: url("fonts/lexend-700.woff2") format("woff2"); }
       :root {
         --bg: #f6eddd;
         --fg: #211d16;
@@ -37,7 +42,7 @@
         margin: 0;
         background: var(--bg);
         color: var(--fg);
-        font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        font: 17px/1.65 "Lexend", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
         -webkit-font-smoothing: antialiased;
       }
       .wrap { max-width: 560px; margin: 0 auto; padding: 88px 24px 56px; }

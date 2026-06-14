@@ -17,5 +17,5 @@ nothing else.
 
 App Store privacy label: **Data Not Collected**.
 
-Contact: sameer@dembrane.com.
+Questions? Open an issue at https://github.com/spashii/font-changer/issues.
 Last updated: 2026-06-13.
