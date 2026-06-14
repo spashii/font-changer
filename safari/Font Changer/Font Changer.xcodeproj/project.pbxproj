@@ -25,8 +25,6 @@
 		8C288F192FDDD84F003B9DCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EDA2FDDD84E003B9DCA /* ViewController.swift */; };
 		8C288F1A2FDDD84F003B9DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C288EDB2FDDD84F003B9DCA /* Assets.xcassets */; };
 		8C288F1B2FDDD84F003B9DCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C288EDB2FDDD84F003B9DCA /* Assets.xcassets */; };
-		8CA1C0DE0000000000000002 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8CA1C0DE0000000000000001 /* AppIcon.icon */; };
-		8CA1C0DE0000000000000003 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8CA1C0DE0000000000000001 /* AppIcon.icon */; };
 		8C288F1C2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EDD2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift */; };
 		8C288F1D2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C288EDD2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift */; };
 		8C288F342FDDD850003B9DCA /* icons in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F2F2FDDD850003B9DCA /* icons */; };
@@ -39,6 +37,8 @@
 		8C288F3B2FDDD850003B9DCA /* fonts.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F312FDDD850003B9DCA /* fonts.json */; };
 		8C288F3C2FDDD850003B9DCA /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F322FDDD850003B9DCA /* fonts */; };
 		8C288F3D2FDDD850003B9DCA /* src in Resources */ = {isa = PBXBuildFile; fileRef = 8C288F332FDDD850003B9DCA /* src */; };
+		8CA1C0DE0000000000000002 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8CA1C0DE0000000000000001 /* AppIcon.icon */; };
+		8CA1C0DE0000000000000003 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = 8CA1C0DE0000000000000001 /* AppIcon.icon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +89,6 @@
 		8C288ED92FDDD84E003B9DCA /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
 		8C288EDA2FDDD84E003B9DCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C288EDB2FDDD84F003B9DCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8CA1C0DE0000000000000001 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 		8C288EDD2FDDD84F003B9DCA /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		8C288EE22FDDD84F003B9DCA /* Font Changer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Font Changer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C288EE52FDDD84F003B9DCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +109,7 @@
 		8C288F312FDDD850003B9DCA /* fonts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = fonts.json; path = ../../../extension/fonts.json; sourceTree = "<group>"; };
 		8C288F322FDDD850003B9DCA /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../../extension/fonts; sourceTree = "<group>"; };
 		8C288F332FDDD850003B9DCA /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src; path = ../../../extension/src; sourceTree = "<group>"; };
+		8CA1C0DE0000000000000001 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -713,11 +713,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -754,11 +757,14 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -790,6 +796,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JMCP69LCSU;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -825,6 +832,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JMCP69LCSU;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
@@ -862,6 +870,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JMCP69LCSU;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -869,6 +878,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -903,6 +913,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JMCP69LCSU;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
@@ -910,6 +921,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "macOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Font Changer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (

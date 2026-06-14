@@ -1,8 +1,10 @@
 # Font Changer
 
-An open-source, privacy-first font switcher for Safari. It restyles web page
-text with readable fonts that are bundled in the app, with per-site control.
-Nothing leaves your device.
+Make any web page easier to read in Safari, on Mac and iPhone. Font Changer
+swaps the page font to a dyslexia-friendly typeface like OpenDyslexic, Lexend,
+or Atkinson Hyperlegible, and lets you tune size, line height, and spacing, on
+by default everywhere, with per-site control. Free, open source, and private by
+design: no accounts, no tracking, nothing leaves your device.
 
 ![The same page, before and after](docs/assets/screenshots/1.png)
 ![The same fonts on Mac and iPhone](docs/assets/screenshots/2.png)
@@ -10,8 +12,8 @@ Nothing leaves your device.
 ![Set the size, line height, and spacing](docs/assets/screenshots/4.png)
 ![Customize any site, or turn it off](docs/assets/screenshots/5.png)
 
-Supports OpenDyslexic, Lexend, and Atkinson Hyperlegible. Not affiliated with or
-endorsed by those projects; it simply ships their fonts under their licenses.
+Not affiliated with or endorsed by OpenDyslexic, Lexend, or Atkinson
+Hyperlegible; it simply ships their fonts under their open-source licenses.
 
 ## What it does
 
@@ -93,6 +95,11 @@ per-site off switch.
   [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) and `extension/fonts/`.
 - Icon: original artwork.
 
+## Found a bug or have an idea?
+
+Tell me. Bug reports and suggestions are welcome:
+[open a GitHub issue](https://github.com/spashii/font-changer/issues/new).
+
 ## More
 
-[Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md) · [Privacy](PRIVACY.md) · [Review notes](REVIEW_NOTES.md)
+[Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md) · [Privacy](PRIVACY.md) · [Review notes](REVIEW_NOTES.md) · [Issues](https://github.com/spashii/font-changer/issues)
