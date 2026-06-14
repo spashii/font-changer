@@ -1,85 +1,122 @@
 <!DOCTYPE html>
 <!--
-  App Store screenshot template. One frame per page, sized exactly 1320×2868
-  (6.9" iPhone). Select a frame with ?frame=1..6. Drop raw device captures into
-  ./screens/ as 1.png … 6.png. Render to PNG with a headless browser, e.g.:
-    npx -y playwright screenshot --viewport-size=1320,2868 \
-      "store/screenshots/template.html?frame=1" store/screenshots/out/1.png
+  App Store screenshot template. One frame per page, 1320×2868 (6.9" iPhone).
+  ?frame=1..4. Raw captures live in ./screens/ as 1.png … 4.png.
+  Captions render in the actual bundled fonts (OpenDyslexic; frame 2 = Lexend).
 -->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <style>
-      :root {
-        --bg: #f6eddd;
-        --ink: #211d16;
-        --muted: #6f6552;
-        --bezel: #211d16;
+      @font-face {
+        font-family: "ODX";
+        src: url("../../docs/fonts/opendyslexic-700.woff2") format("woff2");
+        font-weight: 700;
       }
-      * { box-sizing: border-box; margin: 0; }
-      html, body { background: #fff; }
+      @font-face {
+        font-family: "Lex";
+        src: url("../../docs/fonts/lexend-700.woff2") format("woff2");
+        font-weight: 700;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
       .frame {
         width: 1320px;
         height: 2868px;
-        background: var(--bg);
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 150px 110px 0;
-        font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding: 165px 90px 0;
+        background: linear-gradient(165deg, #fbf3e4 0%, #f4e7d0 52%, #eedcbe 100%);
         overflow: hidden;
       }
       .caption {
-        color: var(--ink);
-        font-size: 84px;
-        line-height: 1.12;
+        font-family: "ODX", -apple-system, "Apple Color Emoji", sans-serif;
+        color: #211d16;
+        font-size: 70px;
+        line-height: 1.18;
         font-weight: 700;
-        letter-spacing: -0.02em;
         text-align: center;
-        max-width: 1000px;
-        margin-bottom: 90px;
+        max-width: 1080px;
+        margin-bottom: 150px; /* device sits lower */
       }
-      .device {
+      .caption.lex {
+        font-family: "Lex", -apple-system, "Apple Color Emoji", sans-serif;
+        letter-spacing: -0.02em;
+      }
+      .stage { position: relative; display: flex; justify-content: center; }
+      .stage::before {
+        content: "";
+        position: absolute;
+        inset: -60px -40px 40px;
+        background: radial-gradient(closest-side, rgba(184, 101, 26, 0.13), transparent 75%);
+        z-index: 0;
+      }
+      .phone {
+        position: relative;
+        z-index: 1;
         width: 940px;
-        border: 22px solid var(--bezel);
-        border-radius: 92px;
-        overflow: hidden;
-        box-shadow: 0 60px 120px -40px rgba(40, 28, 10, 0.45);
-        background: var(--bezel);
+        padding: 16px;
+        border-radius: 116px;
+        background: linear-gradient(150deg, #e7e3dd 0%, #b6b1a9 38%, #d7d2cb 70%, #a9a49c 100%);
+        box-shadow:
+          0 60px 110px -34px rgba(60, 40, 15, 0.5),
+          0 10px 26px rgba(0, 0, 0, 0.16),
+          inset 0 0 0 2px rgba(255, 255, 255, 0.35);
       }
-      .device img { width: 100%; display: block; }
+      .screen {
+        position: relative;
+        border-radius: 100px;
+        overflow: hidden;
+        background: #000;
+        box-shadow: inset 0 0 0 6px #07070a;
+      }
+      .screen img { width: 100%; display: block; }
+      .island {
+        position: absolute;
+        top: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 124px;
+        height: 36px;
+        border-radius: 22px;
+        background: #000;
+        z-index: 2;
+      }
       .placeholder {
-        width: 100%; aspect-ratio: 1290 / 2796; display: flex;
-        align-items: center; justify-content: center; color: #fff8; font-size: 40px;
-        background: repeating-linear-gradient(45deg,#2c2820,#2c2820 28px,#241f18 28px,#241f18 56px);
+        width: 912px; aspect-ratio: 1206 / 2622; background: #1c1a17;
+        display: flex; align-items: center; justify-content: center;
+        color: #fff6; font-size: 40px; font-family: sans-serif;
       }
     </style>
   </head>
   <body>
     <div class="frame">
       <div class="caption" id="caption"></div>
-      <div class="device" id="device"></div>
+      <div class="stage">
+        <div class="phone">
+          <div class="screen" id="screen"><div class="island"></div></div>
+        </div>
+      </div>
     </div>
     <script>
-      // Edit captions here; keep them short and descriptive.
       const FRAMES = {
-        1: "The same page, in a font you can read",
-        2: "OpenDyslexic, Lexend, or Atkinson Hyperlegible",
-        3: "Set the size, line height, and spacing",
-        4: "On everywhere. Off where you want.",
-        5: "Your defaults, with per-site overrides",
-        6: "No tracking. Nothing leaves your device.",
+        1: "The same page, in a font you can read 👓",
+        2: "OpenDyslexic, Lexend, or Atkinson Hyperlegible 🔤",
+        3: "Set the size, line height, and spacing 🎚️",
+        4: "Customize any site, or turn it off 🔧",
       };
       const n = new URLSearchParams(location.search).get("frame") || "1";
-      document.getElementById("caption").textContent = FRAMES[n] || "";
-      const device = document.getElementById("device");
+      const cap = document.getElementById("caption");
+      cap.textContent = FRAMES[n] || "";
+      if (n === "2") cap.classList.add("lex"); // show Lexend in its own caption
+      const screen = document.getElementById("screen");
       const img = new Image();
-      img.onload = () => device.appendChild(img);
+      img.onload = () => screen.appendChild(img);
       img.onerror = () => {
         const ph = document.createElement("div");
         ph.className = "placeholder";
         ph.textContent = "drop screens/" + n + ".png";
-        device.appendChild(ph);
+        screen.appendChild(ph);
       };
       img.src = "screens/" + n + ".png";
     </script>
