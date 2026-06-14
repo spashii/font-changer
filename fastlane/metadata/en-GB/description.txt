@@ -1,0 +1,13 @@
+Make any web page easier to read in Safari, on Mac and iPhone.
+
+Font Changer swaps the page font to a dyslexia-friendly typeface like OpenDyslexic, Lexend, or Atkinson Hyperlegible, or any font already on your device, then lets you tune the text size, line height, letter spacing, and word spacing. It's on by default everywhere, with a one-tap off switch for any site. Code blocks and icon fonts are left untouched.
+
+Private by design:
+- No accounts, no tracking, no analytics, no ads.
+- Every font is bundled in the app. Nothing is ever loaded from the internet.
+- Your settings stay on your device.
+- It only restyles pages. It never reads or sends your browsing.
+
+Free and open source.
+
+Not affiliated with or endorsed by OpenDyslexic, Lexend, or Atkinson Hyperlegible; it simply ships their fonts under their open-source licenses.

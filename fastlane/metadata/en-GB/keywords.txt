@@ -1,0 +1,1 @@
+opendyslexic,lexend,atkinson,hyperlegible,readable,lowvision,accessibility,a11y,spacing,linespacing

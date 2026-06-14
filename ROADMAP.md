@@ -16,6 +16,10 @@
 - Per-change scope picker (this page / this site / defaults) and page-level rules.
 - Export / import settings as JSON; search customizations.
 - Keyboard shortcut to toggle the current site.
+- iPad support. The extension already works on iPad Safari; the first release
+  ships iPhone-only just to get it out sooner, and to skip the multi-gigabyte
+  iPad simulator install. Re-enabling it is a device-family flip plus iPad
+  screenshots.
 
 ## Maybe later
 - iCloud sync across your own devices (no accounts).

@@ -1,0 +1,9 @@
+app_identifier("eu.tangerinetech.fontchanger")
+api_key_path("fastlane/api_key.json")
+
+# Binary is uploaded from Xcode; deliver only manages metadata + screenshots.
+skip_binary_upload(true)
+overwrite_screenshots(true)
+submit_for_review(false)
+force(false) # show the HTML preview and confirm before pushing (set true for unattended runs)
+precheck_include_in_app_purchases(false)

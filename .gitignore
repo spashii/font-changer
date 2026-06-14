@@ -15,3 +15,16 @@ DerivedData/
 
 # folder2website output — rebuilt in CI (Deploy site workflow)
 /site/
+
+# fastlane: secrets + generated artifacts (never commit the API key)
+fastlane/api_key.json
+fastlane/AuthKey*.p8
+fastlane/*.p8
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+# fastlane: App Review contact PII (kept local for deliver, not for a public repo)
+fastlane/metadata/review_information/email_address.txt
+fastlane/metadata/review_information/phone_number.txt
+fastlane/metadata/review_information/first_name.txt
+fastlane/metadata/review_information/last_name.txt
