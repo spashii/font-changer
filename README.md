@@ -4,6 +4,12 @@ An open-source, privacy-first font switcher for Safari. It restyles web page
 text with readable fonts that are bundled in the app, with per-site control.
 Nothing leaves your device.
 
+![The same page, before and after](docs/assets/screenshots/1.png)
+![The same fonts on Mac and iPhone](docs/assets/screenshots/2.png)
+![Choose OpenDyslexic, Lexend, or Atkinson Hyperlegible](docs/assets/screenshots/3.png)
+![Set the size, line height, and spacing](docs/assets/screenshots/4.png)
+![Customize any site, or turn it off](docs/assets/screenshots/5.png)
+
 Supports OpenDyslexic, Lexend, and Atkinson Hyperlegible. Not affiliated with or
 endorsed by those projects; it simply ships their fonts under their licenses.
 
@@ -90,8 +96,3 @@ per-site off switch.
 ## More
 
 [Roadmap](ROADMAP.md) · [Contributing](CONTRIBUTING.md) · [Privacy](PRIVACY.md) · [Review notes](REVIEW_NOTES.md)
-
-## Screenshots
-
-To add under `docs/screenshots/`: enabling the extension in Safari, the popup,
-and a page before/after.

@@ -12,3 +12,6 @@ build/
 DerivedData/
 *.ipa
 *.dSYM.zip
+
+# folder2website output — rebuilt in CI (Deploy site workflow)
+/site/

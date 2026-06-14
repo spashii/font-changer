@@ -1,0 +1,28 @@
+{
+  "name": "Font Changer",
+  "short_name": "Font Changer",
+  "description": "An open-source, privacy-first font switcher for Safari.",
+  "icons": [
+    { "src": "docs/assets/icon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "docs/assets/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "background_color": "#f6eddd",
+  "theme_color": "#b8651a",
+  "display": "standalone",
+  "start_url": "/",
+  "readme_site": {
+    "fg": "#211d16",
+    "muted": "#6f6552",
+    "line": "#e6dcc6",
+    "font": "Lexend",
+    "width": "560px",
+    "baseUrl": "https://fontchanger.tangerinetech.eu",
+    "dark": {
+      "bg": "#181511",
+      "fg": "#f2e8d4",
+      "muted": "#a99e86",
+      "line": "#332d24",
+      "accent": "#e6a35a"
+    }
+  }
+}
