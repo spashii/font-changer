@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--
+  Mac App Store screenshot template. One frame per page, 2560×1600 (16:10).
+  ?frame=1..6. Same palette + caption style as template.html (the iPhone set).
+  1 = before/after split, 2 = cross-platform (Mac laptop + iPhone),
+  3..6 = window captures from ./screens-mac/ (1..4.png).
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @font-face {
+        font-family: "ODX";
+        src: url("../../extension/fonts/opendyslexic-700.woff2") format("woff2");
+        font-weight: 700;
+      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      .frame {
+        width: 2560px;
+        height: 1600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 104px 140px 120px;
+        background: linear-gradient(165deg, #fbf3e4 0%, #f4e7d0 52%, #eedcbe 100%);
+        overflow: hidden;
+      }
+      .caption {
+        font-family: "ODX", -apple-system, "Apple Color Emoji", sans-serif;
+        color: #211d16;
+        font-size: 84px;
+        line-height: 1.14;
+        font-weight: 700;
+        text-align: center;
+        max-width: 2120px;
+        margin-bottom: 76px;
+      }
+      .stage {
+        flex: 1;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .stage::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(closest-side, rgba(184, 101, 26, 0.12), transparent 72%);
+        z-index: 0;
+      }
+
+      /* ---- single window capture (frames 3-6) ---- */
+      .shot {
+        position: relative;
+        z-index: 1;
+        max-width: 2260px;
+        max-height: 1090px;
+        width: auto;
+        height: auto;
+        filter: drop-shadow(0 48px 90px rgba(60, 40, 15, 0.42));
+      }
+
+      /* ---- before / after split (frame 1) ---- */
+      .baWin {
+        position: relative;
+        z-index: 1;
+        width: 2080px;
+        display: flex;
+        border-radius: 34px;
+        overflow: hidden;
+        filter: drop-shadow(0 48px 90px rgba(60, 40, 15, 0.42));
+      }
+      .baCol {
+        flex: 1;
+        min-height: 1010px;
+        padding: 96px 88px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .baCol.before { background: #ffffff; color: #30302f; }
+      .baCol.after  { background: #fbf6ec; color: #1b1712; box-shadow: inset 6px 0 0 rgba(0,0,0,0.06); }
+      .baChip {
+        font-family: "ODX", sans-serif; font-weight: 700; font-size: 38px;
+        padding: 10px 30px; border-radius: 999px; margin-bottom: 46px;
+        display: inline-block; align-self: flex-start;
+      }
+      .baCol.before .baChip { background: #ececec; color: #555; }
+      .baCol.after  .baChip { background: #e9982b; color: #fff; }
+      .baText { margin: 0; }
+      .baText.before {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 45px; line-height: 1.3;
+      }
+      .baText.after {
+        font-family: "ODX", sans-serif;
+        font-size: 50px; line-height: 1.6;
+        letter-spacing: 0.02em; word-spacing: 0.06em;
+      }
+
+      /* ---- iPhone bezel ---- */
+      .phone {
+        position: relative; z-index: 1;
+        width: 900px; padding: 15px;
+        border-radius: 112px;
+        background: linear-gradient(150deg, #e7e3dd 0%, #b6b1a9 38%, #d7d2cb 70%, #a9a49c 100%);
+        box-shadow:
+          0 60px 110px -34px rgba(60, 40, 15, 0.5),
+          0 10px 26px rgba(0, 0, 0, 0.16),
+          inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+      }
+      .screen {
+        position: relative; border-radius: 97px; overflow: hidden;
+        background: #000; box-shadow: inset 0 0 0 6px #07070a;
+      }
+      .screen img { width: 100%; display: block; }
+      .island {
+        position: absolute; top: 26px; left: 50%; transform: translateX(-50%);
+        width: 120px; height: 35px; border-radius: 22px; background: #000; z-index: 2;
+      }
+
+      /* ---- MacBook bezel ---- */
+      .laptop { position: relative; }
+      .lid {
+        padding: 22px; border-radius: 32px;
+        background: linear-gradient(150deg, #e7e3dd 0%, #b6b1a9 40%, #d7d2cb 72%, #a9a49c 100%);
+        box-shadow:
+          0 60px 110px -34px rgba(60, 40, 15, 0.5),
+          0 10px 26px rgba(0, 0, 0, 0.16),
+          inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+      }
+      .lscreen {
+        position: relative; border-radius: 14px; overflow: hidden;
+        background: #000; box-shadow: inset 0 0 0 5px #07070a;
+      }
+      .lscreen img { width: 100%; display: block; }
+      .lcam {
+        position: absolute; top: 9px; left: 50%; transform: translateX(-50%);
+        width: 10px; height: 10px; border-radius: 50%; background: #1a1a1d; z-index: 3;
+      }
+      .deck {
+        position: relative; width: 113%; margin-left: -6.5%; margin-top: -2px; height: 32px;
+        background: linear-gradient(180deg, #cdc8c0 0%, #b2ada5 60%, #97928a 100%);
+        border-radius: 0 0 26px 26px;
+        box-shadow: 0 34px 64px -22px rgba(60, 40, 15, 0.55);
+      }
+      .deck::after {
+        content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+        width: 150px; height: 14px; background: #8e8981; border-radius: 0 0 12px 12px;
+      }
+
+      /* ---- cross-platform combo (frame 2): laptop dominant, phone accent ---- */
+      .combo { position: relative; z-index: 1; width: 1560px; }
+      .combo .laptop { width: 1560px; }
+      .combo .phone {
+        position: absolute; right: -150px; bottom: -70px;
+        transform: scale(0.46); transform-origin: bottom right; z-index: 5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="caption" id="caption"></div>
+      <div class="stage" id="stage"></div>
+    </div>
+    <script>
+      const FRAMES = {
+        1: "The same page, before and after 👓",
+        2: "The same fonts on your Mac and iPhone 🖥️",
+        3: "Change any page's font, right from the toolbar 🔤",
+        4: "Readable type on any site, on by default 📖",
+        5: "Customize any site, with its own font and spacing 🎚️",
+        6: "Your defaults, with per-site overrides 🔧",
+      };
+      const para =
+        "Good typography is invisible. It lets you read the words without " +
+        "fighting the letters, which is the whole point. The right typeface, " +
+        "size, and spacing make any page easier on the eyes.";
+      const shot = (src) => '<img class="shot" src="' + src + '" alt="">';
+      const phone = (src) =>
+        '<div class="phone"><div class="screen"><div class="island"></div>' +
+        '<img src="' + src + '"></div></div>';
+      const laptop = (src) =>
+        '<div class="laptop"><div class="lid"><div class="lscreen">' +
+        '<div class="lcam"></div><img src="' + src + '"></div></div>' +
+        '<div class="deck"></div></div>';
+
+      const n = new URLSearchParams(location.search).get("frame") || "1";
+      document.getElementById("caption").textContent = FRAMES[n] || "";
+      const stage = document.getElementById("stage");
+
+      if (n === "1") {
+        stage.innerHTML =
+          '<div class="baWin">' +
+            '<div class="baCol before"><span class="baChip">Before</span>' +
+              '<p class="baText before">' + para + "</p></div>" +
+            '<div class="baCol after"><span class="baChip">After</span>' +
+              '<p class="baText after">' + para + "</p></div>" +
+          "</div>";
+      } else if (n === "2") {
+        stage.innerHTML =
+          '<div class="combo">' + laptop("screens/mac.png") +
+          phone("screens/1.png") + "</div>";
+      } else {
+        const map = { 3: "1", 4: "2", 5: "3", 6: "4" };
+        stage.innerHTML = shot("screens-mac/" + map[n] + ".png");
+      }
+    </script>
+  </body>
+</html>

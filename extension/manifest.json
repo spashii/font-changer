@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Font Changer",
   "version": "0.1.0",
-  "description": "Privacy-first font switcher for Safari: bundled readable fonts (OpenDyslexic, Lexend, Atkinson), text size and spacing, per-site opt-out. No tracking.",
+  "description": "Make Safari pages readable: OpenDyslexic, Lexend, Atkinson, size and spacing. Private, no tracking.",
   "icons": {
     "16": "icons/icon-16.png",
     "32": "icons/icon-32.png",
