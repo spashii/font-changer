@@ -59,6 +59,11 @@
       }
       @media (prefers-color-scheme: dark) { a.btn { color: #1c160d; } }
       a.btn.ghost { background: transparent; color: var(--accent); border: 1px solid var(--line); }
+      .shots { display: flex; gap: 14px; overflow-x: auto; margin: 0 0 32px;
+        padding-bottom: 10px; scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; }
+      .shots img { height: 440px; border-radius: 22px; flex: 0 0 auto;
+        scroll-snap-align: center; border: 1px solid var(--line); }
       footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 20px; }
       footer a { color: var(--accent); }
       :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
@@ -69,6 +74,14 @@
       <img class="logo" src="icon.svg" width="84" height="84" alt="Font Changer icon" />
       <h1>Font Changer</h1>
       <p class="tagline">A font switcher for Safari. Swap any page's text to a readable font and adjust the size and spacing.</p>
+
+      <div class="shots">
+        <img src="shots/1.png" width="200" height="434" alt="The same page, before and after" />
+        <img src="shots/2.png" width="200" height="434" alt="The same fonts on Mac and iPhone" />
+        <img src="shots/3.png" width="200" height="434" alt="Choose OpenDyslexic, Lexend, or Atkinson Hyperlegible" />
+        <img src="shots/4.png" width="200" height="434" alt="Set the size, line height, and spacing" />
+        <img src="shots/5.png" width="200" height="434" alt="Customize any site, or turn it off" />
+      </div>
 
       <ul>
         <li>Built-in fonts: OpenDyslexic, Lexend, and Atkinson Hyperlegible — or any font installed on your device.</li>

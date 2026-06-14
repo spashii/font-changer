@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <!--
   App Store screenshot template. One frame per page, 1320×2868 (6.9" iPhone).
-  ?frame=1..4. Raw captures live in ./screens/ as 1.png … 4.png.
+  ?frame=1..5. Raw captures live in ./screens/.
   Captions render in the actual bundled fonts (OpenDyslexic; frame 2 = Lexend).
+  Frame 1 = cross-platform hero (mac.png laptop + screens/1.png iPhone overlay).
+  Frame 5 = macOS controls proof (mac.png in a laptop frame).
 -->
 <html lang="en">
   <head>
@@ -29,6 +31,7 @@
         background: linear-gradient(165deg, #fbf3e4 0%, #f4e7d0 52%, #eedcbe 100%);
         overflow: hidden;
       }
+      .frame.center { justify-content: flex-start; }
       .caption {
         font-family: "ODX", -apple-system, "Apple Color Emoji", sans-serif;
         color: #211d16;
@@ -51,6 +54,8 @@
         background: radial-gradient(closest-side, rgba(184, 101, 26, 0.13), transparent 75%);
         z-index: 0;
       }
+
+      /* ---- iPhone ---- */
       .phone {
         position: relative;
         z-index: 1;
@@ -73,15 +78,87 @@
       .screen img { width: 100%; display: block; }
       .island {
         position: absolute;
-        top: 26px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 124px;
-        height: 36px;
-        border-radius: 22px;
-        background: #000;
-        z-index: 2;
+        top: 26px; left: 50%; transform: translateX(-50%);
+        width: 124px; height: 36px; border-radius: 22px;
+        background: #000; z-index: 2;
       }
+      /* before/after: the SAME paragraph rendered twice (frame 1) */
+      .baPage {
+        width: 100%; aspect-ratio: 1206 / 2622;
+        display: flex; flex-direction: column; background: #fff;
+      }
+      .baHalf {
+        flex: 1; position: relative; overflow: hidden;
+        padding: 86px 70px; display: flex; flex-direction: column;
+        justify-content: center; align-items: flex-start; /* balance + keep chips pill-sized */
+      }
+      .baHalf.before { color: #2f2f2f; }
+      .baHalf.after  { background: #fbf6ec; color: #1b1712;
+        box-shadow: inset 0 5px 0 rgba(0,0,0,0.08); }
+      .baChip {
+        font-family: "ODX", sans-serif; font-weight: 700; font-size: 30px;
+        padding: 8px 22px; border-radius: 999px; margin-bottom: 34px;
+        display: inline-block;
+      }
+      .baHalf.before .baChip { background: #ececec; color: #555; }
+      .baHalf.after  .baChip { background: #e9982b; color: #fff; }
+      .baText { margin: 0; }
+      .baText.before {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 33px; line-height: 1.26;
+      }
+      .baText.after {
+        font-family: "ODX", sans-serif;
+        font-size: 39px; line-height: 1.62;
+        letter-spacing: 0.02em; word-spacing: 0.06em;
+      }
+
+      /* ---- MacBook ---- */
+      .laptop { position: relative; }
+      .lid {
+        padding: 20px;
+        border-radius: 30px;
+        background: linear-gradient(150deg, #e7e3dd 0%, #b6b1a9 40%, #d7d2cb 72%, #a9a49c 100%);
+        box-shadow:
+          0 60px 110px -34px rgba(60, 40, 15, 0.5),
+          0 10px 26px rgba(0, 0, 0, 0.16),
+          inset 0 0 0 2px rgba(255, 255, 255, 0.35);
+      }
+      .lscreen {
+        position: relative;
+        border-radius: 14px;
+        overflow: hidden;
+        background: #000;
+        box-shadow: inset 0 0 0 5px #07070a;
+      }
+      .lscreen img { width: 100%; display: block; }
+      .lcam {
+        position: absolute; top: 9px; left: 50%; transform: translateX(-50%);
+        width: 10px; height: 10px; border-radius: 50%;
+        background: #1a1a1d; z-index: 3;
+      }
+      .deck {
+        position: relative;
+        width: 114%; margin-left: -7%; margin-top: -2px; height: 34px;
+        background: linear-gradient(180deg, #cdc8c0 0%, #b2ada5 60%, #97928a 100%);
+        border-radius: 0 0 26px 26px;
+        box-shadow: 0 34px 64px -22px rgba(60, 40, 15, 0.55);
+      }
+      .deck::after { /* the lid-open notch / trackpad groove */
+        content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+        width: 150px; height: 14px;
+        background: #8e8981; border-radius: 0 0 12px 12px;
+      }
+
+      /* ---- frame 2 composite: laptop dominant, phone accent ---- */
+      .combo { position: relative; z-index: 1; width: 1180px; margin-top: 360px; }
+      .combo .laptop { width: 1180px; }
+      .combo .phone {
+        position: absolute; right: -80px; bottom: -160px;
+        transform: scale(0.44); transform-origin: bottom right;
+        z-index: 5;
+      }
+
       .placeholder {
         width: 912px; aspect-ratio: 1206 / 2622; background: #1c1a17;
         display: flex; align-items: center; justify-content: center;
@@ -92,33 +169,51 @@
   <body>
     <div class="frame">
       <div class="caption" id="caption"></div>
-      <div class="stage">
-        <div class="phone">
-          <div class="screen" id="screen"><div class="island"></div></div>
-        </div>
-      </div>
+      <div class="stage" id="stage"></div>
     </div>
     <script>
       const FRAMES = {
-        1: "The same page, in a font you can read 👓",
-        2: "OpenDyslexic, Lexend, or Atkinson Hyperlegible 🔤",
-        3: "Set the size, line height, and spacing 🎚️",
-        4: "Customize any site, or turn it off 🔧",
+        1: "The same page — before and after 👓",
+        2: "The same fonts on your Mac and iPhone 🖥️",
+        3: "OpenDyslexic, Lexend, or Atkinson Hyperlegible 🔤",
+        4: "Set the size, line height, and spacing 🎚️",
+        5: "Customize any site, or turn it off 🔧",
       };
+      const phone = (src) =>
+        '<div class="phone"><div class="screen"><div class="island"></div>' +
+        '<img src="' + src + '"></div></div>';
+      const laptop = (src) =>
+        '<div class="laptop"><div class="lid"><div class="lscreen">' +
+        '<div class="lcam"></div><img src="' + src + '"></div></div>' +
+        '<div class="deck"></div></div>';
+
       const n = new URLSearchParams(location.search).get("frame") || "1";
       const cap = document.getElementById("caption");
+      const stage = document.getElementById("stage");
       cap.textContent = FRAMES[n] || "";
-      if (n === "2") cap.classList.add("lex"); // show Lexend in its own caption
-      const screen = document.getElementById("screen");
-      const img = new Image();
-      img.onload = () => screen.appendChild(img);
-      img.onerror = () => {
-        const ph = document.createElement("div");
-        ph.className = "placeholder";
-        ph.textContent = "drop screens/" + n + ".png";
-        screen.appendChild(ph);
-      };
-      img.src = "screens/" + n + ".png";
+      if (n === "3") cap.classList.add("lex"); // font-picker caption in Lexend
+
+      // screen captures: 3→picker(2.png), 4→controls(3.png), 5→customize(4.png)
+      const SCREEN = { 3: "2", 4: "3", 5: "4" };
+
+      if (n === "1") {
+        const para = "Good typography is invisible. It lets you read the words " +
+          "without fighting the letters — which is the whole point. The right " +
+          "typeface, size, and spacing make any page easier on the eyes.";
+        stage.innerHTML =
+          '<div class="phone"><div class="screen"><div class="island"></div>' +
+          '<div class="baPage">' +
+            '<div class="baHalf before"><span class="baChip">Before</span>' +
+              '<p class="baText before">' + para + "</p></div>" +
+            '<div class="baHalf after"><span class="baChip">After</span>' +
+              '<p class="baText after">' + para + "</p></div>" +
+          "</div></div></div>";
+      } else if (n === "2") {
+        stage.innerHTML = '<div class="combo">' + laptop("screens/mac.png") +
+          phone("screens/1.png") + "</div>";
+      } else {
+        stage.innerHTML = phone("screens/" + (SCREEN[n] || n) + ".png");
+      }
     </script>
   </body>
 </html>
